@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Getting Started — AutobahnAndroid 0.5.2 documentation</title>
+    
+    <link rel="stylesheet" href="Getting%20Started%20%E2%80%94%20AutobahnAndroid%200.5.2%20documentation_files/basic.css" type="text/css">
+    <link rel="stylesheet" href="Getting%20Started%20%E2%80%94%20AutobahnAndroid%200.5.2%20documentation_files/pygments.css" type="text/css">
+    <link rel="stylesheet" href="Getting%20Started%20%E2%80%94%20AutobahnAndroid%200.5.2%20documentation_files/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="Getting%20Started%20%E2%80%94%20AutobahnAndroid%200.5.2%20documentation_files/bootstrap-theme.css" type="text/css">
+    <link rel="stylesheet" href="Getting%20Started%20%E2%80%94%20AutobahnAndroid%200.5.2%20documentation_files/bootstrap-sphinx.css" type="text/css">
+    
+    <script async="" src="Getting%20Started%20%E2%80%94%20AutobahnAndroid%200.5.2%20documentation_files/analytics.js"></script><script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.5.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="Getting%20Started%20%E2%80%94%20AutobahnAndroid%200.5.2%20documentation_files/jquery.js"></script>
+    <script type="text/javascript" src="Getting%20Started%20%E2%80%94%20AutobahnAndroid%200.5.2%20documentation_files/underscore.js"></script>
+    <script type="text/javascript" src="Getting%20Started%20%E2%80%94%20AutobahnAndroid%200.5.2%20documentation_files/doctools.js"></script>
+    <script type="text/javascript" src="Getting%20Started%20%E2%80%94%20AutobahnAndroid%200.5.2%20documentation_files/jquery-1.js"></script>
+    <script type="text/javascript" src="Getting%20Started%20%E2%80%94%20AutobahnAndroid%200.5.2%20documentation_files/jquery-fix.js"></script>
+    <script type="text/javascript" src="Getting%20Started%20%E2%80%94%20AutobahnAndroid%200.5.2%20documentation_files/bootstrap.js"></script>
+    <script type="text/javascript" src="Getting%20Started%20%E2%80%94%20AutobahnAndroid%200.5.2%20documentation_files/bootstrap-sphinx.js"></script>
+    <link rel="top" title="AutobahnAndroid 0.5.2 documentation" href="http://autobahn.ws/android/index.html">
+    <link rel="up" title="Table of Contents" href="http://autobahn.ws/android/table_of_contents.html">
+    <link rel="next" title="Examples" href="http://autobahn.ws/android/examples.html">
+    <link rel="prev" title="WebSocketWriter" href="http://autobahn.ws/android/_gen/de/tavendo/autobahn/WebSocketWriter.html">
+
+   
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+
+   <link rel="stylesheet" href="Getting%20Started%20%E2%80%94%20AutobahnAndroid%200.5.2%20documentation_files/tavendo.css">
+   <link rel="stylesheet" href="Getting%20Started%20%E2%80%94%20AutobahnAndroid%200.5.2%20documentation_files/autobahn.css">
+
+
+
+   <style>
+      .navbar-brand {
+         width: 216px;
+         height: 50px;
+         /*width: 209px;*/
+         /*height: 21px;*/
+         /*margin-top: 10px;*/
+         /*margin-left: 0px !important;*/
+         /*background-image: url(//tavendo-common-static.s3-eu-west-1.amazonaws.com/img/gen/autobahnpython.svg.gz)*/
+      }
+
+      .navbar-brand::after {
+         content: url(//tavendo-common-static.s3-eu-west-1.amazonaws.com/img/gen/autobahnandroid.svg.gz);
+      }
+
+      .legacynotice {
+         padding: 1em;
+         background-color: #FFBF5D;
+         border: 1px solid #D48205;
+         margin: 1em;
+         max-width: 700px;
+      }
+
+   </style>
+
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="http://autobahn.ws/android/index.html">
+           </a>
+        <span class="navbar-text navbar-version pull-left"><b>0.5.2</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button" id="dLabelGlobalToc" data-toggle="dropdown" data-target="#" href="http://autobahn.ws/android/index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc" role="menu" aria-labelledby="dLabelGlobalToc"><li class="toctree-l1"><a class="reference internal" href="http://autobahn.ws/android/index.html">Home</a></li><li class="toctree-l1 current"><a class="current reference internal" href="">Getting Started</a></li><li class="toctree-l1"><a class="reference internal" href="http://autobahn.ws/android/examples.html">Examples</a></li><li class="toctree-l1"><a class="reference internal" href="http://autobahn.ws/android/_gen/packages.html">Javadoc</a></li><li class="toctree-l1 current"><a class="reference internal" href="http://autobahn.ws/android/table_of_contents.html">Table of Contents</a></li>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button" id="dLabelLocalToc" data-toggle="dropdown" data-target="#" href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc" role="menu" aria-labelledby="dLabelLocalToc"><li><a class="reference internal" href="#">Getting Started</a>
+</li><li class="divider"></li><li class="dropdown-submenu"><a class="reference internal" href="#installation" tabindex="-1">Installation</a><ul class="unstyled dropdown-menu">
+<li><a class="reference internal" href="#requirements">Requirements</a></li>
+<li><a class="reference internal" href="#set-compiler-level">Set Compiler Level</a></li>
+<li><a class="reference internal" href="#add-jars-to-your-project">Add JARs to your project</a></li>
+<li><a class="reference internal" href="#set-app-permissions">Set App Permissions</a></li>
+<li><a class="reference internal" href="#your-first-client">Your first Client</a></li>
+<li><a class="reference internal" href="#where-to-go-now">Where to go now</a></li>
+</ul>
+</li>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="http://autobahn.ws/android/_gen/de/tavendo/autobahn/WebSocketWriter.html" title="Previous Chapter: WebSocketWriter"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">« WebSocketWriter</span>
+    </a>
+  </li>
+  <li>
+    <a href="http://autobahn.ws/android/examples.html" title="Next Chapter: Examples"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Examples »</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+  <a href="http://autobahn.ws/android/_sources/gettingstarted.txt" rel="nofollow">Source</a>
+</li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input name="q" class="form-control" placeholder="Search" type="text">
+ </div>
+  <input name="check_keywords" value="yes" type="hidden">
+  <input name="area" value="default" type="hidden">
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav affix" role="complementary"><div id="logoblock">
+   <p class="logo">
+     <a href="http://autobahn.ws/"><img class="logo" src="Getting%20Started%20%E2%80%94%20AutobahnAndroid%200.5.2%20documentation_files/autobahn.svg" alt="Autobahn|Android" width="200" height="200"></a>
+   </p>
+   <h3><strong>Autobahn</strong>|Android</h3>
+
+   
+   <p>
+     <iframe src="Getting%20Started%20%E2%80%94%20AutobahnAndroid%200.5.2%20documentation_files/github-btn_002.html" allowtransparency="true" scrolling="0" width="200px" height="35px" frameborder="0"></iframe>
+   </p>
+   
+</div>
+<div class="side_toc sidebar_block" id="quicklinks">
+   <h4><a href="https://github.com/tavendo/AutobahnAndroid">Source Code</a></h4>
+   <h4><a href="https://groups.google.com/forum/#%21forum/autobahnws">Mailing List</a></h4>
+   <h4><a href="https://github.com/tavendo/AutobahnAndroid/issues">Issue Tracker</a></h4>
+   <h4><a href="http://stackoverflow.com/questions/tagged/autobahn?sort=newest">StackOverflow</a></h4>
+</div>
+
+<div class="side_toc sidebar_block">
+   <hr>
+   <h4><a href="http://autobahn.ws/android/pages/contents.html">Site Contents</a></h4>
+   <hr>
+   <h4>Page Contents</h4>
+   <ul class="nav nav-list">
+<li><a class="reference internal" href="#">Getting Started</a><ul class="nav nav-list">
+<li><a class="reference internal" href="#installation">Installation</a><ul class="nav nav-list">
+<li><a class="reference internal" href="#requirements">Requirements</a></li>
+<li><a class="reference internal" href="#set-compiler-level">Set Compiler Level</a></li>
+<li><a class="reference internal" href="#add-jars-to-your-project">Add JARs to your project</a></li>
+<li><a class="reference internal" href="#set-app-permissions">Set App Permissions</a></li>
+<li><a class="reference internal" href="#your-first-client">Your first Client</a></li>
+<li><a class="reference internal" href="#where-to-go-now">Where to go now</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+   <hr>
+   <h4><a href="http://autobahn.ws/android/pages/reference/autobahn.html">API Reference</a></h4>
+   <h4><a href="http://autobahn.ws/android/genindex.html">Index</a></h4>
+</div>
+
+<img src="" alt="">
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  <div class="section" id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<div class="legacynotice container">
+<p>Autobahn|Android implements version 1 of WAMP.</p>
+<p>This is incompatible with version 2 of WAMP which is already implemented in Autobahn|Python as well as Autobahn|JS</p>
+<p>Migration of Autobahn|Android to WAMP v2 is coming, but we cannot guarantee a release date.</p>
+</div>
+<p>This short intro will get you started with Autobahn|Android in no time:</p>
+<ul class="simple">
+<li>Installation</li>
+<li>Your first Client</li>
+<li>Where to go now</li>
+</ul>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="requirements">
+<h3>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h3>
+<p>Autobahn|Android is written against the Android 2.2 platform (= API 
+level 8). You can use it with projects built against that version or 
+higher.</p>
+<p>Autobahn|Android depends on Jackson, a high-performance JSON 
+processor. AutobahnAndroid is known to work with Jackson 1.8 and 1.9.</p>
+</div>
+<div class="section" id="set-compiler-level">
+<h3>Set Compiler Level<a class="headerlink" href="#set-compiler-level" title="Permalink to this headline">¶</a></h3>
+<p>Make sure the Java compiler compliance level is set to (at least) 1.6 in your project settings:</p>
+<img alt="_images/autobahn_eclipse0.png" src="Getting%20Started%20%E2%80%94%20AutobahnAndroid%200.5.2%20documentation_files/autobahn_eclipse0.png">
+</div>
+<div class="section" id="add-jars-to-your-project">
+<h3>Add JARs to your project<a class="headerlink" href="#add-jars-to-your-project" title="Permalink to this headline">¶</a></h3>
+<p>To use Autobahn|Android , you will need 3 JARs:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://autobahn.s3.amazonaws.com/android/autobahn-0.5.0.jar">AutobahnAndroid</a></li>
+<li><a class="reference external" href="http://repository.codehaus.org/org/codehaus/jackson/jackson-core-asl/1.9.7/jackson-core-asl-1.9.7.jar">Jackson Core</a></li>
+<li><a class="reference external" href="http://repository.codehaus.org/org/codehaus/jackson/jackson-mapper-asl/1.9.7/jackson-mapper-asl-1.9.7.jar">Jackson Mapper</a></li>
+</ul>
+<p>You can also get a <a class="reference external" href="https://autobahn.s3.amazonaws.com/android/autobahn-0.5.0.zip">complete bundle</a> of AutobahnAndroid and Jackson JARs.</p>
+<p>. note:: Autobahn|Android is also available as <a class="reference external" href="https://github.com/tavendo/AutobahnAndroid">source code</a> on GitHub.</p>
+<p>Put the 3 above JARs into your project’s libs folder</p>
+<img alt="_images/autobahn_eclipse1.png" src="Getting%20Started%20%E2%80%94%20AutobahnAndroid%200.5.2%20documentation_files/autobahn_eclipse1.png">
+<p>and add the JARs to the project’s build path</p>
+<img alt="_images/autobahn_eclipse2.png" src="Getting%20Started%20%E2%80%94%20AutobahnAndroid%200.5.2%20documentation_files/autobahn_eclipse2.png">
+</div>
+<div class="section" id="set-app-permissions">
+<h3>Set App Permissions<a class="headerlink" href="#set-app-permissions" title="Permalink to this headline">¶</a></h3>
+<p>Make sure the Manifest for your application contains the android.permission.INTERNET</p>
+<div class="highlight-java"><div class="highlight"><pre><span class="o">&lt;?</span><span class="n">xml</span> <span class="n">version</span><span class="o">=</span><span class="s">"1.0"</span> <span class="n">encoding</span><span class="o">=</span><span class="s">"utf-8"</span><span class="o">?&gt;</span>
+<span class="o">&lt;</span><span class="n">manifest</span> <span class="nl">xmlns:</span><span class="n">android</span><span class="o">=</span><span class="s">"http://schemas.android.com/apk/res/android"</span> <span class="o">...&gt;</span>
+
+    <span class="o">&lt;</span><span class="n">uses</span><span class="o">-</span><span class="n">permission</span> <span class="nl">android:</span><span class="n">name</span><span class="o">=</span><span class="s">"android.permission.INTERNET"</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">uses</span><span class="o">-</span><span class="n">permission</span><span class="o">&gt;</span>
+
+    <span class="o">&lt;</span><span class="n">application</span> <span class="o">...&gt;</span>
+    <span class="o">&lt;/</span><span class="n">application</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">manifest</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<img alt="_images/autobahn_eclipse3.png" src="Getting%20Started%20%E2%80%94%20AutobahnAndroid%200.5.2%20documentation_files/autobahn_eclipse3.png">
+</div>
+<div class="section" id="your-first-client">
+<h3>Your first Client<a class="headerlink" href="#your-first-client" title="Permalink to this headline">¶</a></h3>
+<p>Create a new Android project and replace the main activity code with the following:</p>
+<div class="highlight-java"><div class="highlight"><pre><span class="kn">package</span> <span class="n">de</span><span class="o">.</span><span class="na">tavendo</span><span class="o">.</span><span class="na">test1</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">android.app.Activity</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.os.Bundle</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.util.Log</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">de.tavendo.autobahn.WebSocketConnection</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">de.tavendo.autobahn.WebSocketException</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">de.tavendo.autobahn.WebSocketHandler</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test1Activity</span> <span class="kd">extends</span> <span class="n">Activity</span> <span class="o">{</span>
+
+   <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">TAG</span> <span class="o">=</span> <span class="s">"de.tavendo.test1"</span><span class="o">;</span>
+
+   <span class="kd">private</span> <span class="kd">final</span> <span class="n">WebSocketConnection</span> <span class="n">mConnection</span> <span class="o">=</span> <span class="k">new</span> <span class="n">WebSocketConnection</span><span class="o">();</span>
+
+   <span class="kd">private</span> <span class="kt">void</span> <span class="nf">start</span><span class="o">()</span> <span class="o">{</span>
+
+      <span class="kd">final</span> <span class="n">String</span> <span class="n">wsuri</span> <span class="o">=</span> <span class="s">"ws://192.168.1.132:9000"</span><span class="o">;</span>
+
+      <span class="k">try</span> <span class="o">{</span>
+         <span class="n">mConnection</span><span class="o">.</span><span class="na">connect</span><span class="o">(</span><span class="n">wsuri</span><span class="o">,</span> <span class="k">new</span> <span class="n">WebSocketHandler</span><span class="o">()</span> <span class="o">{</span>
+
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onOpen</span><span class="o">()</span> <span class="o">{</span>
+               <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Status: Connected to "</span> <span class="o">+</span> <span class="n">wsuri</span><span class="o">);</span>
+               <span class="n">mConnection</span><span class="o">.</span><span class="na">sendTextMessage</span><span class="o">(</span><span class="s">"Hello, world!"</span><span class="o">);</span>
+            <span class="o">}</span>
+
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onTextMessage</span><span class="o">(</span><span class="n">String</span> <span class="n">payload</span><span class="o">)</span> <span class="o">{</span>
+               <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Got echo: "</span> <span class="o">+</span> <span class="n">payload</span><span class="o">);</span>
+            <span class="o">}</span>
+
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onClose</span><span class="o">(</span><span class="kt">int</span> <span class="n">code</span><span class="o">,</span> <span class="n">String</span> <span class="n">reason</span><span class="o">)</span> <span class="o">{</span>
+               <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Connection lost."</span><span class="o">);</span>
+            <span class="o">}</span>
+         <span class="o">});</span>
+      <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">WebSocketException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+
+         <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="n">e</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
+      <span class="o">}</span>
+   <span class="o">}</span>
+
+   <span class="nd">@Override</span>
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
+
+      <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
+      <span class="n">setContentView</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">main</span><span class="o">);</span>
+
+      <span class="n">start</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>Now start a WebSocket echo server on some host and adjust line 18 for the IP of the host.</p>
+<div class="admonition note alert alert-info">
+<p class="first admonition-title">Note</p>
+<p class="last">You can use any WebSocket server that implements 
+WebSocket RFC6455 or at least Hybi-10+. A WebSocket server that only 
+implements Hixie-76 will not work.</p>
+</div>
+<div class="admonition note alert alert-info">
+<p class="first admonition-title">Note</p>
+<p class="last">For this demo, on the WebSocket server you will need to 
+implement “echo”, so that any message sent to it is simply echo’ed back 
+to the client. I.e. you can use the server provided with the WebSocket 
+Echo server example that comes with Autobahn|Python .</p>
+</div>
+<p>Build and run the app. You should see the following in the Android device logcat:</p>
+<img alt="_images/autobahn_eclipse4.png" src="Getting%20Started%20%E2%80%94%20AutobahnAndroid%200.5.2%20documentation_files/autobahn_eclipse4.png">
+</div>
+<div class="section" id="where-to-go-now">
+<h3>Where to go now<a class="headerlink" href="#where-to-go-now" title="Permalink to this headline">¶</a></h3>
+<p>Now that you are up and running, check out the <a class="reference internal" href="http://autobahn.ws/android/examples.html"><em>Examples</em></a> available or the <a class="reference internal" href="http://autobahn.ws/android/_gen/packages.html"><em>API reference</em></a>.</p>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+
+   <div class="extendedFooter">
+      <div class="logoblock">
+         <p class="logo">
+           <a href="http://autobahn.ws/android/pages/index.html"><img class="logo" src="Getting%20Started%20%E2%80%94%20AutobahnAndroid%200.5.2%20documentation_files/autobahn.svg" alt="Autobahn|Android" width="200" height="200"></a>
+         </p>
+         <h3><strong>Autobahn</strong>|Android</h3>
+         
+         <p>
+           <iframe src="Getting%20Started%20%E2%80%94%20AutobahnAndroid%200.5.2%20documentation_files/github-btn_002.html" allowtransparency="true" scrolling="0" width="200px" height="35px" frameborder="0"></iframe>
+         </p>
+         
+      </div>
+      <div class="side_toc sidebar_block" id="quicklinks">
+         <h4><a href="https://github.com/tavendo/AutobahnAndroid">Source Code</a></h4>
+         <h4><a href="https://groups.google.com/forum/#%21forum/autobahnws">Mailing List</a></h4>
+         <h4><a href="https://github.com/tavendo/AutobahnAndroid/issues">Issue Tracker</a></h4>
+         <h4><a href="http://stackoverflow.com/questions/tagged/autobahn?sort=newest">StackOverflow</a></h4>
+      </div>
+   </div>
+   <!-- <div class="clearBoth"></div> -->
+
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+    </p>
+    <p>
+      Copyright © 2011-2014 <a href="http://tavendo.com/">Tavendo GmbH</a>. Content on this site is licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons CC-BY-SA</a>.
+      <br>
+      Tavendo, WAMP and "Autobahn WebSocket" are trademarks of <a href="http://tavendo.com/">Tavendo GmbH</a>.
+    </p>
+  </div>
+
+</footer>
+
+
+<!-- community widget iframe -->
+
+
+   <!-- Community Widget stripped! -->
+
+
+
+<a id="manifesto" href="http://www.reactivemanifesto.org/">
+   <!-- <img src="//d379ifj7s9wntv.cloudfront.net/reactivemanifesto/images/ribbons/we-are-reactive-black-right.png"> -->
+   <img src="Getting%20Started%20%E2%80%94%20AutobahnAndroid%200.5.2%20documentation_files/we_are_reactive.svg" alt="Reactive Manifesto: We are reactive banner" width="144" height="144">
+</a>
+
+
+   <script>
+     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+     ga('create', 'UA-23019220-3', 'autobahn.ws');
+     ga('send', 'pageview');
+   </script>
+
+
+
+  
+</body></html>

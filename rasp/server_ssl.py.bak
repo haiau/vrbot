@@ -1,0 +1,37 @@
+import socket, ssl
+import cv
+
+addr = '192.168.1.200'
+port = 10023
+
+bindsocket = socket.socket()
+bindsocket.bind((addr, port))
+bindsocket.listen(5)
+print "Start server %s:%s" % (addr, port)
+
+def do_something(connstream, data):
+    print "do_something:", data
+    return False
+
+def deal_with_client(connstream):
+    while True:
+        data = connstream.recv(1024)
+        if data:
+            print "Receive: " + data
+
+            connstream.write("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n")
+        else:
+            break
+
+while True:
+    newsocket, fromaddr = bindsocket.accept()
+    connstream = ssl.wrap_socket(newsocket,
+                                server_side=True,
+                                certfile="/home/haiau/projects/vrbot/android/server.pem",
+                                keyfile="/home/haiau/projects/vrbot/android/server.key")
+    try:
+        deal_with_client(connstream)
+    finally:
+        connstream.shutdown(socket.SHUT_RDWR)
+        connstream.close()
+        print "Shutdown server."
