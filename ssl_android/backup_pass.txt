@@ -1,2 +1,0 @@
-Enter pass phrase for client_key.pem: haiau
-Enter pass phrase for server_key.pem: haiau
